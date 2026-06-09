@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ធៀបការអេឡិចត្រូនិច - ពិធីមង្គលការបែបសាសនាឥស្លាម</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts for Khmer and Stylish Serif -->
+    <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Animate.css for smooth entrance -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <style>
+        body { font-family: 'Kantumruy Pro', sans-serif; scroll-behavior: smooth; background-color: #f0f5f1; }
+        .serif-font { font-family: 'Playfair Display', 'Kantumruy Pro', serif; }
+        .arabic-font { font-family: 'Amiri', serif; }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #047857; border-radius: 10px; }
+        .islamic-arch { border-radius: 50% 50% 0 0 / 40% 40% 0 0; }
+    </style>
+</head>
+<body class="text-stone-800 bg-[#EBF2EC] overflow-x-hidden">
+
+    <!-- Music Player -->
+    <div class="fixed bottom-5 right-5 z-50">
+        <button id="music-btn" class="bg-emerald-700 text-white p-3 rounded-full shadow-lg hover:bg-emerald-800 transition-all duration-300 flex items-center justify-center w-12 h-12 border border-amber-300">
+            <i id="music-icon" class="fas fa-music"></i>
+        </button>
+        <audio id="bg-music" loop>
+            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="fixed top-0 left-0 right-0 bg-[#F4F9F5]/90 backdrop-blur-md shadow-sm z-40 border-b border-emerald-100">
+        <div class="max-w-md mx-auto px-4 py-3 flex justify-between items-center">
+            <span class="serif-font font-bold text-emerald-800 text-lg tracking-wider">S &amp; S</span>
+            <div class="flex space-x-4 text-xs font-semibold text-emerald-900">
+                <a href="#home" class="hover:text-emerald-700">ទំព័រដើម</a>
+                <a href="#agenda" class="hover:text-emerald-700">កម្មវិធី</a>
+                <a href="#gallery" class="hover:text-emerald-700">រូបភាព</a>
+                <a href="#gift" class="hover:text-emerald-700">ចងដៃ</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Container -->
+    <div class="max-w-md mx-auto bg-white min-h-screen shadow-2xl pt-12 pb-20 relative border-x border-emerald-50">
+        
+        <!-- SECTION 1: HOME -->
+        <section id="home" class="relative min-h-[90vh] flex flex-col justify-between items-center text-center px-6 py-12 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-emerald-50/50 via-white to-white overflow-hidden">
+            <div class="absolute top-4 left-4 w-12 h-12 border-t-2 border-l-2 border-emerald-600"></div>
+            <div class="absolute top-4 right-4 w-12 h-12 border-t-2 border-r-2 border-emerald-600"></div>
+            <div class="absolute bottom-4 left-4 w-12 h-12 border-b-2 border-l-2 border-emerald-600"></div>
+            <div class="absolute bottom-4 right-4 w-12 h-12 border-b-2 border-r-2 border-emerald-600"></div>
+
+            <div class="mt-8 animate__animated animate__fadeInDown space-y-2">
+                <p class="arabic-font text-2xl text-emerald-800 font-bold">بِسْمِ اللَّهِ الرَّحْمَٰនِ الرَّحِيمِ</p>
+                <p class="text-[10px] tracking-wide text-emerald-600 uppercase font-bold">ដោយព្រះនាមអល់ឡោះ ជាព្រះមហាករុណាទិគុណ ទ្រង់មហាអាណិតស្រឡាញ់</p>
+                <div class="h-[1px] w-24 bg-amber-400 mx-auto mt-2"></div>
+            </div>
+
+            <div class="my-6 animate__animated animate__zoomIn">
+                <div class="relative w-48 h-56 mx-auto p-1.5 border-2 border-emerald-600 islamic-arch flex items-center justify-center bg-[#FAF9F6]">
+                    <!-- ដូរលីងរូបថតធំរបស់អ្នកនៅទីនេះ src="..." -->
+                    <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&q=80&w=400" alt="កូនកំលោះ និង កូនក្រមុំ" class="w-full h-full object-cover islamic-arch shadow-md">
+                    <div class="absolute -bottom-2 bg-emerald-700 text-amber-200 text-xs px-4 py-1 rounded-full shadow-md font-medium border border-amber-300">
+                        ១២ មិថុនា ២០២៦
+                    </div>
+                </div>
+            </div>
+
+            <div class="space-y-3 animate__animated animate__fadeInUp">
+                <h2 class="text-xs text-stone-500 font-bold tracking-wider">កូនប្រុស</h2>
+                <h1 class="text-2xl font-bold text-emerald-900 tracking-wide">ស៊ូហ្វៀន សំណាង</h1>
+                <p class="text-amber-500 text-xl serif-font">&amp;</p>
+                <h2 class="text-xs text-stone-500 font-bold tracking-wider">កូនស្រី</h2>
+                <h1 class="text-2xl font-bold text-emerald-900 tracking-wide">សាលីហះ ស្រីនី</h1>
+            </div>
+
+            <div class="mb-6 space-y-2 animate__animated animate__fadeInUp">
+                <p class="text-xs text-stone-500 leading-relaxed px-4">អស្សាឡាមុអាឡៃគុម វ៉ារ៉ស់ម៉ាទុលឡោះ វ៉ាបារ៉ាកាទុះ</p>
+                <p class="text-[11px] text-stone-600 leading-relaxed px-2">យើងខ្ញុំមានកិត្តិយសសូមគោរពអញ្ជើញបងប្អូន សាច់ញាតិ និងមិត្តភក្តិទាំងអស់ ចូលរួមជាអធិបតី និងផ្តល់ពរជ័យក្នុងពិធីរៀបអាពាហ៍ពិពាហ៍ (Nikah &amp; Walimah) របស់យើងខ្ញុំទាំងពីរនាក់។</p>
+                <i class="fa-solid fa-angles-down text-emerald-600 animate-bounce mt-4 block"></i>
+            </div>
+        </section>
+
+        <!-- SECTION 2: COUNTDOWN TIMER -->
+        <section class="py-8 px-6 bg-gradient-to-b from-emerald-50/40 to-emerald-100/30 text-center border-y border-emerald-100">
+            <h3 class="text-xs text-emerald-800 font-bold mb-4 tracking-wider uppercase">ការរាប់ថយក្រោយឆ្ពោះទៅថ្ងៃមង្គល</h3>
+            <div class="grid grid-cols-4 gap-2 max-w-xs mx-auto">
+                <div class="bg-white p-3 rounded-xl shadow-sm border border-emerald-100">
+                    <span id="days" class="block text-xl font-bold text-emerald-700">00</span>
+                    <span class="text-[10px] text-stone-500">ថ្ងៃ</span>
+                </div>
+                <div class="bg-white p-3 rounded-xl shadow-sm border border-emerald-100">
+                    <span id="hours" class="block text-xl font-bold text-emerald-700">00</span>
+                    <span class="text-[10px] text-stone-500">ម៉ោង</span>
+                </div>
+                <div class="bg-white p-3 rounded-xl shadow-sm border border-emerald-100">
+                    <span id="minutes" class="block text-xl font-bold text-emerald-700">00</span>
+                    <span class="text-[10px] text-stone-500">នាទី</span>
+                </div>
+                <div class="bg-white p-3 rounded-xl shadow-sm border border-emerald-100">
+                    <span id="seconds" class="block text-xl font-bold text-emerald-700">00</span>
+                    <span class="text-[10px] text-stone-500">វិនាទី</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: PARENTS -->
+        <section class="py-12 px-6 space-y-8 bg-white">
+            <div class="text-center">
+                <h3 class="serif-font text-emerald-800 font-bold text-lg">អាណាព្យាបាលសងខាង</h3>
+                <div class="h-[1px] w-12 bg-emerald-600 mx-auto mt-2"></div>
+            </div>
+            <div class="grid grid-cols-2 gap-4 text-center">
+                <div class="space-y-2 p-4 bg-[#FAF9F5] rounded-2xl border border-emerald-100/50">
+                    <p class="text-xs text-emerald-800 font-bold border-b border-emerald-200 pb-1">ខាងកូនប្រុស</p>
+                    <div class="text-[11px] space-y-1 text-stone-600">
+                        <p class="font-bold text-stone-800">លោក សុខ ហាសាន់</p>
+                        <p>និង</p>
+                        <p class="font-bold text-stone-800">លោកស្រី ហ្វាទីម៉ះ</p>
+                    </div>
+                </div>
+                <div class="space-y-2 p-4 bg-[#FAF9F5] rounded-2xl border border-emerald-100/50">
+                    <p class="text-xs text-emerald-800 font-bold border-b border-emerald-200 pb-1">ខាងកូនស្រី</p>
+                    <div class="text-[11px] space-y-1 text-stone-600">
+                        <p class="font-bold text-stone-800">លោក សៅរ៍ អូស្មាន</p>
+                        <p>និង</p>
+                        <p class="font-bold text-stone-800">លោកស្រី អាមីណះ</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: AGENDA -->
+        <section id="agenda" class="py-12 px-6 bg-emerald-50/20 border-y border-emerald-100">
+            <div class="text-center mb-8">
+                <h3 class="serif-font text-emerald-800 font-bold text-lg">កម្មវិធីមង្គលការ</h3>
+                <p class="text-[10px] text-emerald-600 font-bold mt-1">ថ្ងៃសុក្រ ២៦ ខែហ្សុលកិតៈ ឆ្នាំ ១៤៤៧ ហិលជ្រី</p>
+                <div class="h-[1px] w-12 bg-emerald-600 mx-auto mt-2"></div>
+            </div>
+            <div class="space-y-6 relative before:absolute before:inset-0 before:left-4 before:h-full before:w-[2px] before:bg-emerald-200">
+                <div class="relative pl-8">
+                    <div class="absolute left-2.5 top-1 w-3.5 h-3.5 rounded-full bg-emerald-700 border-4 border-white shadow"></div>
+                    <div class="bg-white p-4 rounded-xl shadow-sm border border-emerald-100">
+                        <span class="text-[10px] font-bold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded">វេលាម៉ោង ០៨:៣០ ព្រឹក</span>
+                        <h4 class="font-bold text-sm text-stone-800 mt-2 flex items-center gap-1.5">
+                            <i class="fa-solid fa-file-signature text-emerald-600"></i>
+                            <span>ពិធីនិកះ (Nikah Ceremony)</span>
+                        </h4>
+                        <p class="text-xs text-stone-500 mt-1">ពិធីសច្ចាប្រណិធាន និងចុះកិច្ចសន្យាអាពាហ៍ពិពាហ៍តាមច្បាប់សាសនាឥស្លាម។</p>
+                    </div>
+                </div>
+                <div class="relative pl-8">
+                    <div class="absolute left-2.5 top-1 w-3.5 h-3.5 rounded-full bg-emerald-700 border-4 border-white shadow"></div>
+                    <div class="bg-white p-4 rounded-xl shadow-sm border border-emerald-100">
+                        <span class="text-[10px] font-bold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded">វេលាម៉ោង ១១:៣០ ថ្ងៃត្រង់</span>
+                        <h4 class="font-bold text-sm text-stone-800 mt-2 flex items-center gap-1.5">
+                            <i class="fa-solid fa-utensils text-emerald-600"></i>
+                            <span>ពិធីវ៉ាលីម៉ះ (Walimah Feast)</span>
+                        </h4>
+                        <p class="text-xs text-stone-500 mt-1">ទទួលស្វាគមន៍ភ្ញៀវកិត្តិយសទាំងអស់ចូលរួមពិសាភោជនាហារ។</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: VENUE -->
+        <section class="py-12 px-6 text-center space-y-6">
+            <div class="space-y-2">
+                <i class="fa-solid fa-mosque text-3xl text-emerald-700"></i>
+                <h3 class="serif-font text-emerald-800 font-bold text-lg">ទីតាំងប្រារព្ធពិធី</h3>
+                <p class="text-xs text-stone-600 font-semibold">សាលពិធីការ និងសន្និបាត ឌឹ ព្រីមៀម សេនធ័រ</p>
+                <p class="text-xs text-stone-400">អគារ A, ផ្លូវ ២០០៤, រាជធានីភ្នំពេញ</p>
+            </div>
+            <div class="rounded-2xl overflow-hidden shadow-md border border-emerald-100 h-48 bg-stone-100">
+                <iframe class="w-full h-full border-0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3908.7706596954203!2d104.8719003!3d11.5682977!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3109511111111111%3A0x2222222222222222!2sPhnom%20Penh!5e0!3m2!1sen!2skh!4v1700000000000" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <a href="https://maps.google.com" target="_blank" class="inline-flex items-center space-x-2 bg-emerald-700 text-white text-xs px-6 py-2.5 rounded-full shadow-md border border-amber-300">
+                <i class="fa-solid fa-route"></i>
+                <span>នាំផ្លូវតាម Google Maps</span>
+            </a>
+        </section>
+
+        <!-- SECTION 6: GALLERY -->
+        <section id="gallery" class="py-12 px-6 bg-[#FAF9F5] border-t border-emerald-100">
+            <div class="text-center mb-8">
+                <h3 class="serif-font text-emerald-800 font-bold text-lg">វិចិត្រសាលរូបភាព</h3>
+                <p class="text-xs text-stone-400 mt-1 font-semibold italic">"And We created you in pairs" - Quran 78:8</p>
+                <div class="h-[1px] w-12 bg-emerald-600 mx-auto mt-2"></div>
+            </div>
+            <div class="grid grid-cols-2 gap-3">
+                <div class="space-y-3">
+                    <div class="rounded-xl overflow-hidden shadow-sm"><img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80&w=300" class="w-full object-cover h-40"></div>
+                    <div class="rounded-xl overflow-hidden shadow-sm"><img src="https://images.unsplash.com/photo-1519225495810-7512c696505a?auto=format&fit=crop&q=80&w=300" class="w-full object-cover h-56"></div>
+                </div>
+                <div class="space-y-3">
+                    <div class="rounded-xl overflow-hidden shadow-sm"><img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&q=80&w=300" class="w-full object-cover h-56"></div>
+                    <div class="rounded-xl overflow-hidden shadow-sm"><img src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?auto=format&fit=crop&q=80&w=300" class="w-full object-cover h-40"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 7: GIFT -->
+        <section id="gift" class="py-12 px-6 bg-white border-t border-emerald-100">
+            <div class="bg-gradient-to-b from-emerald-50/50 to-emerald-100/20 rounded-3xl p-6 border border-emerald-200 text-center space-y-6">
+                <h3 class="serif-font text-emerald-800 font-bold text-lg">ចងដៃឌីជីថល (Wedding Gift)</h3>
+                <div class="flex justify-center space-x-2 p-1 bg-emerald-100/50 rounded-lg max-w-xs mx-auto">
+                    <button onclick="switchQR('groom')" id="tab-groom" class="flex-1 py-1.5 text-xs font-bold rounded-md bg-white text-emerald-800 shadow-sm">ខាងកូនប្រុស</button>
+                    <button onclick="switchQR('bride')" id="tab-bride" class="flex-1 py-1.5 text-xs font-bold rounded-md text-stone-600">ខាងកូនស្រី</button>
+                </div>
+                <div class="relative bg-white p-5 rounded-2xl shadow-sm border border-emerald-100 max-w-[240px] mx-auto">
+                    <div id="qr-groom-container" class="space-y-4">
+                        <!-- ជំនួសលីងរូបភាព QR កូដធនាគាររបស់អ្នកនៅទីនេះ src="..." -->
+                        <img id="qr-groom-img" src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=ABA_Groom_000111222" class="w-48 h-48 mx-auto object-contain">
+                        <p class="font-bold text-emerald-900 text-xs">ABA Bank: 000 111 222</p>
+                    </div>
+                    <div id="qr-bride-container" class="space-y-4 hidden">
+                        <!-- ជំនួសលីងរូបភាព QR កូដធនាគាររបស់អ្នកនៅទីនេះ src="..." -->
+                        <img id="qr-bride-img" src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=ABA_Bride_333444555" class="w-48 h-48 mx-auto object-contain">
+                        <p class="font-bold text-emerald-900 text-xs">ABA Bank: 333 444 555</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="py-12 bg-emerald-900 text-emerald-100/80 text-center px-6 space-y-4">
+            <h4 class="serif-font text-xl text-white font-bold">S &amp; S</h4>
+            <p class="text-xs leading-relaxed">សូមអរគុណយ៉ាងជ្រាលជ្រៅចំពោះវត្តមាន និងពាក្យឌូអាតដ៏ល្អប្រសើររបស់លោកអ្នក។</p>
+        </footer>
+    </div>
+
+    <script>
+        const bgMusic = document.getElementById('bg-music');
+        const musicBtn = document.getElementById('music-btn');
+        const musicIcon = document.getElementById('music-icon');
+        let isPlaying = false;
+
+        musicBtn.addEventListener('click', function() {
+            if (isPlaying) { bgMusic.pause(); musicIcon.className = 'fas fa-play'; isPlaying = false; } 
+            else { bgMusic.play().then(() => { musicIcon.className = 'fas fa-music text-white animate-spin'; isPlaying = true; }); }
+        });
+
+        function switchQR(type) {
+            const tg = document.getElementById('tab-groom'), tb = document.getElementById('tab-bride');
+            const cg = document.getElementById('qr-groom-container'), cb = document.getElementById('qr-bride-container');
+            if (type === 'groom') {
+                tg.className = "flex-1 py-1.5 text-xs font-bold rounded-md bg-white text-emerald-800 shadow-sm";
+                tb.className = "flex-1 py-1.5 text-xs font-bold rounded-md text-stone-600";
+                cg.classList.remove('hidden'); cb.classList.add('hidden');
+            } else {
+                tb.className = "flex-1 py-1.5 text-xs font-bold rounded-md bg-white text-emerald-800 shadow-sm";
+                tg.className = "flex-1 py-1.5 text-xs font-bold rounded-md text-stone-600";
+                cb.classList.remove('hidden'); cg.classList.add('hidden');
+            }
+        }
+    </script>
+</body>
+</html>
